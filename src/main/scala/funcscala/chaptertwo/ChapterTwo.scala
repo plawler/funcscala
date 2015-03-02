@@ -1,4 +1,4 @@
-package funcscala
+package funcscala.chaptertwo
 
 /**
  * Created by paullawler on 2/20/15.

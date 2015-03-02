@@ -1,4 +1,4 @@
-package funcscala
+package funcscala.chapterone
 
 /**
  * Created by paullawler on 2/19/15.
