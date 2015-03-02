@@ -27,6 +27,16 @@ object List {
     case Cons(x,xs) => x * product(xs)
   }
 
+  def tail[A](l: List[A]): List[A] = l match {
+    case Nil => throw new IllegalArgumentException("invalid argument: tail of empty list")
+    case Cons(_, t) => t
+  }
+
+  def drop[A](n: Int, l: List[A]): List[A] = {
+    if (n <= 0) l
+    else drop(n-1, tail(l))
+  }
+
   val x = List(1,2,3,4,5) match {
     case Cons(x, Cons(2, Cons(4, _))) => x
     case Nil => 42
@@ -39,6 +49,11 @@ object List {
 
 object ChapterThree extends App{
 
-  println(List.x)
+//  println(List.x)
+
+//  println(List.tail(List(1,2,3)))
+//  println(List.tail(Nil))
+
+  println(List.drop(2, List(1,2,3,4)))
 
 }
